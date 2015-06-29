@@ -21,5 +21,5 @@ class TestApp(unittest.TestCase):
     def test_ping_route(self):
         response = self.client.get('/ping')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, "pong!")
+        self.assertEqual(response.data, b'pong!')
         self.assertEqual(response.mimetype, "text/html")
